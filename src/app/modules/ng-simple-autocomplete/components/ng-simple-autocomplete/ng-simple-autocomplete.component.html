@@ -1,0 +1,12 @@
+<div class="ng-simple-autocomplete">
+  <input type="text" [placeholder]="placeholder"
+  [(ngModel)]="searchText"
+  (focus)="toggleDropdown('focus')"
+  (blur)="toggleDropdown('blur')">
+  <ul *ngIf="showDropDown">
+    <li *ngFor="let item of sourceArray | filter : searchText"
+    (click)="selectValue(item)">
+      {{ fieldNameFormatter(item) }}
+    </li>
+  </ul>
+</div>

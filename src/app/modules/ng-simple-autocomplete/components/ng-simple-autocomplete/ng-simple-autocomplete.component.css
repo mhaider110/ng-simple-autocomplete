@@ -1,0 +1,25 @@
+.ng-simple-autocomplete {
+    width: 40%;
+}
+.ng-simple-autocomplete > input[type='text'] {
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    width: 98%;
+    padding: 10px;
+}
+.ng-simple-autocomplete > ul {
+    border: 1px solid blue;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding-right: 1px;
+    line-height: 1.2rem;
+    transition: max-height 0.5s, overflow 0s;
+    max-height: 200px;
+    overflow-y: scroll
+}
+.ng-simple-autocomplete > ul > li:hover {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
