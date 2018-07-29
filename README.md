@@ -2,6 +2,85 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
 
+## Features
+
+ng-simple-autocomplete2 is autocomplete component for Angular2+. It uses data(json array) and item(key in josn to populate dropdown) from it's parent component and filter based on search.
+
+- Data filtering.
+- Custom styling.
+- Event binding.
+
+## Installation
+
+> npm install ng-simple-autocomplete2
+
+Add it to your Angular Module.
+
+```
+import { NgSimpleAutocompleteModule } from 'ng-simple-autocomplete2';
+
+@NgModule({
+  imports: [
+    NgSimpleAutocompleteModule
+  ]
+})
+export class AppModule { }
+
+```
+
+## Usage
+
+###### Template - somecomponent.component.html
+
+```
+<ng-simple-autocomplete
+[placeholder]="placeholder"
+[sourceArray]="data"
+[fieldNameFormatter]="returnFieldFromObject"
+(onSelect)="selectedObject($event)"
+>
+</ng-simple-autocomplete>
+
+```
+
+###### Dataset properties and event - somecomponent.component.ts
+
+```
+export class SomeComponent {
+  placeholder = "Search";
+  // source array
+  data = [{
+    'code': '01',
+    'day': [{
+      'lang': 'english',
+      'value': 'Sunday'
+    }, {
+      'lang': 'french',
+      'value': 'dimanche'
+    }],
+    'month': [{
+      'lang': 'english',
+      'value': 'May'
+    }, {
+      'lang': 'french',
+      'value': 'Mai'
+    }]
+  }
+];
+
+  returnFieldFromObject(item) {
+	// item represent one object in above data array.
+	// you can return any field based that will be use to populate drop-down
+    return item.day[0].value;
+  }
+  // Selected object
+  selectedObject(item) {
+	// do something with selected item (object)
+    console.log(item);
+  }
+}
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
