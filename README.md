@@ -70,7 +70,7 @@ export class SomeComponent {
 
   returnFieldFromObject(item) {
 	// item represent one object in above data array.
-	// you can return any field based that will be use to populate drop-down
+	// you can return any field that will be use to populate drop-down
     return item.day[0].value;
   }
   // Selected object
