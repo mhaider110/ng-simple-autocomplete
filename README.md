@@ -12,6 +12,9 @@ ng-simple-autocomplete2 is autocomplete component for Angular2+. It uses data(js
 - Multi-select with search
 - Select using keyboard
 
+## Demo
+- [checkout usage and demo **here**](https://stackblitz.com/edit/ng-simple-autocomplete2)
+
 ## Installation
 
 > npm install ng-simple-autocomplete2
