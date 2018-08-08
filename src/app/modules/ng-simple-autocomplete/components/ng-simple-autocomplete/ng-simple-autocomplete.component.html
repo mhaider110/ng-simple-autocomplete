@@ -1,0 +1,36 @@
+<div class="ng-simple-autocomplete">
+
+  <input type="text" *ngIf="!multiSelect" #inputBox [placeholder]="placeholder"
+  [(ngModel)]="searchText"
+  (focus)="toggleDropdown('focus')"
+  (keyup)="selectItemByKeyboard($event.keyCode)"
+  (input)="onInputChange($event.target.value)"
+  (blur)="toggleDropdown('blur')">
+
+  <div *ngIf="multiSelect" class="multiSelectMain" (click)="focusInput()">
+    <span>
+      <span *ngFor="let item of mutliSelectedArray; let i=index" class="multiSeletedItem">
+        {{ fieldNameFormatter(item) }}
+        <span class="auto-complete-icon" (click)="removeFromSeletedArray(i)"></span>
+      </span>
+    </span>
+    <span>
+      <input type="text" #inputBox [placeholder]="placeholder"
+        [(ngModel)]="searchText"
+        (focus)="toggleDropdown('focus')"
+        (keyup)="selectItemByKeyboard($event.keyCode)"
+        (input)="onInputChange($event.target.value)"
+        (blur)="toggleDropdown('blur')">
+      </span>
+  </div>
+
+  <ul *ngIf="showDropDown" #itemList>
+    <li *ngFor="let item of sourceArray | filter : searchText; let i=index;" 
+    (mousedown)="selectValue(item)"
+    (mouseover)="updateSelectedItemIndex(i)"
+    [ngClass]="{'active-item': i==selectedItemIndex}">
+      {{ fieldNameFormatter(item) }}
+    </li>
+  </ul>
+
+</div>
