@@ -11,14 +11,21 @@
       "check-space"
     ],
     "curly": true,
+<<<<<<< HEAD
     "deprecation": {
       "severity": "warn"
     },
+=======
+>>>>>>> d8d71189ada2396a122ad602c022715ceb02407b
     "eofline": true,
     "forin": true,
     "import-blacklist": [
       true,
+<<<<<<< HEAD
       "rxjs/Rx"
+=======
+      "rxjs"
+>>>>>>> d8d71189ada2396a122ad602c022715ceb02407b
     ],
     "import-spacing": true,
     "indent": [
@@ -106,6 +113,10 @@
         "variable-declaration": "nospace"
       }
     ],
+<<<<<<< HEAD
+=======
+    "typeof-compare": true,
+>>>>>>> d8d71189ada2396a122ad602c022715ceb02407b
     "unified-signatures": true,
     "variable-name": false,
     "whitespace": [
@@ -116,7 +127,22 @@
       "check-separator",
       "check-type"
     ],
+<<<<<<< HEAD
     "no-output-on-prefix": true,
+=======
+    "directive-selector": [
+      true,
+      "attribute",
+      "app",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "app",
+      "kebab-case"
+    ],
+>>>>>>> d8d71189ada2396a122ad602c022715ceb02407b
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": true,
@@ -125,6 +151,13 @@
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
+<<<<<<< HEAD
     "directive-class-suffix": true
+=======
+    "directive-class-suffix": true,
+    "no-access-missing-member": true,
+    "templates-use-public": true,
+    "invoke-injectable": true
+>>>>>>> d8d71189ada2396a122ad602c022715ceb02407b
   }
 }

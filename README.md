@@ -1,6 +1,6 @@
 # NgSimpleAutocomplete
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
 
 ## Features
 
@@ -40,8 +40,7 @@ export class AppModule { }
 [sourceArray]="data"
 [fieldNameFormatter]="returnFieldFromObject"
 (onSelect)="selectedObject($event)"
-[multiSelect]="true"
->
+[multiSelect]="true">
 </ng-simple-autocomplete>
 
 ```

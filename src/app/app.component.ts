@@ -127,7 +127,7 @@ export class AppComponent {
       'value': 'juillet'
     }]
   }
-];
+  ];
 
   returnFieldFromObject(item) {
     // return field for dropdown item
