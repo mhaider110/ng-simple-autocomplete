@@ -21,7 +21,7 @@ ng-simple-autocomplete2 is autocomplete component for Angular2+. It uses data(js
 
 Add it to your Angular Module.
 
-```
+```typescript
 import { NgSimpleAutocompleteModule } from 'ng-simple-autocomplete2';
 
 @NgModule({
@@ -37,7 +37,7 @@ export class AppModule { }
 
 ###### Template - somecomponent.component.html
 
-```
+```html
 <ng-simple-autocomplete
 [placeholder]="placeholder"
 [sourceArray]="data"
@@ -50,7 +50,7 @@ export class AppModule { }
 
 ###### Dataset properties and event - somecomponent.component.ts
 
-```
+```typescript
 export class SomeComponent {
   placeholder = "Search";
   // source array
